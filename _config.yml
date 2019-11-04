@@ -1,9 +1,7 @@
 # Site settings
-title: Swetlika Tripathy
-description:
-
-# User settings
-username: Swetlika Tripathy
-user_description: 
-user_title: Software Engineer
+name: Swetlika Tripathy
+description: 
+role: Software Engineer
 email: swetlika98@gmail.com
+user_image: 
+username: swetlika

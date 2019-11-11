@@ -1,7 +1,34 @@
 # Site settings
-name: Swetlika Tripathy
-description: Hello World
-role: Software Engineer
-email: swetlika98@gmail.com
-user_image: 
-username: swetlika
+title: Swetlika Tripathy
+description: 'Software Engineer'
+url: 'https://swetlika.github.io/'
+baseurl: ''
+
+author:
+  name: 'Swetlika Tripathy'
+  email: swetlika98@gmail.com
+  facebook_username: swetlika
+  github_username:  swetlika
+  linkedin_username:  swetlika
+  instagram_username: swetlika
+
+defaults:
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+        layout: 'post'
+
+sass:
+    sass_dir: _sass
+    style: compressed
+
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
+
+plugins: ['jekyll-paginate']
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']

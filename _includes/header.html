@@ -1,18 +1,95 @@
-<div id="particles-js">
-  <div class="header">
-      <h1>
-        <!-- <span class="site-profile">{{ site.user_image }}</span> -->
-        <span class="site-name">{{ site.name }}</span>
-        <span class="site-description">{{ site.role }}</span>
-      </h1>
-      <div class="header-icons">
-        <a aria-label="Email" href="mailto:{{ site.email }}"><i class="icon fa fa-envelope"></i></a>
-        <a aria-label="LinkedIn" target="_blank" href="https://www.linkedin.com/in/{{ site.username }}"><i class="icon fa fa-linkedin-in" aria-hidden="true"></i></a>
-        <a aria-label="Facebook" target="_blank" href="https://facebook.com/{{ site.username }}"><i class="icon fa fa-facebook" aria-hidden="true"></i></a>
-        <a aria-label="Instagram" target="_blank" href="https://instagram.com/{{ site.username }}"><i class="icon fa fa-instagram" aria-hidden="true"></i></a>
-        <a aria-label="Github" target="_blank" href="https://github.com/{{ site.username }}"><i class="icon fa fa-github-alt" aria-hidden="true"></i></a>
-        <a aria-label="Resume" target="_blank" href="https://google.com"><i class="icon fa fa-file-pdf" aria-hidden="true"></i></a>
+<span class="mobile btn-mobile-menu">
+  <i class="icon icon-list btn-mobile-menu__icon"></i>
+  <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+</span>
+
+<header class="panel-cover" style="background-image: url({{ site.baseurl }}/images/cover.jpg)">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+        <a href="{{ site.baseurl }}/" title="link to home of {{ site.title }}">
+          <img src="{{ site.baseurl }}/images/profile1.jpg" class="user-image" alt="My Profile Photo">
+          <h1 class="panel-cover__title panel-title">{{ site.title }}</h1>
+        </a>
+        <hr class="panel-cover__divider">
+        <p class="panel-cover__description">{{ site.description }}</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary">
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation navigation--social">
+            <ul class="navigation">
+
+              <!-- Resume -->
+              <li class="navigation__item">
+                  <a href="https://www.dropbox.com/s/l8mf8f7jphclmcf/resume_2018.pdf?dl=0" title="{{ site.author.name }} Resume" target="_blank">
+                  <i class="icon icon-page-pdf"></i>
+                  <span class="label">Resume</span>
+                </a>
+              </li>
+
+            {% if site.author.linkedin_username %}
+            <!-- LinkedIn -->
+            <li class="navigation__item">
+              <a href="https://www.linkedin.com/in/{{ site.author.linkedin_username }}" title="{{ site.author.linkedin_username }} on LinkedIn" target="_blank">
+                <i class="icon icon-social-linkedin"></i>
+                <span class="label">LinkedIn</span>
+              </a>
+            </li>
+            {% endif %}
+  
+
+            {% if site.author.facebook_username %}
+            <!-- Facebook -->
+            <li class="navigation__item">
+              <a href="http://facebook.com/{{ site.author.facebook_username }}" title="{{ site.author.facebook_username }} on Facebook" target="_blank">
+                <i class="icon icon-social-facebook"></i>
+                <span class="label">Facebook</span>
+              </a>
+            </li>
+            {% endif %}
+
+            {% if site.author.instagram_username %}
+            <!-- Instagram -->
+            <li class="navigation__item">
+              <a href="http://instagram.com/{{ site.author.instagram_username }}" title="{{ site.author.instagram_username }} on Instagram" target="_blank">
+                <i class="icon icon-social-instagram"></i>
+                <span class="label">Instagram</span>
+              </a>
+            </li>
+            {% endif %}
+
+            
+            {% if site.author.github_username %}
+            <!-- GitHub -->
+            <li class="navigation__item">
+              <a href="https://www.github.com/{{ site.author.github_username }}" title="{{ site.author.github_username }} on GitHub" target="_blank">
+                <i class="icon icon-social-github"></i>
+                <span class="label">GitHub</span>
+              </a>
+            </li>
+            {% endif %}
+
+            {% if site.author.email %}
+            <!-- Email -->
+            <li class="navigation__item">
+              <a href="mailto:{{ site.author.email }}" title="Email {{ site.author.email }}" target="_blank">
+                <i class="icon icon-mail"></i>
+                <span class="label">Email</span>
+              </a>
+            </li>
+            {% endif %}
+
+            </ul>
+          </nav>
+
+        </div>
+
       </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
   </div>
-  <a class="down" href="#about" data-scroll><i class="icon fa fa-chevron-down" aria-hidden="true"></i></a>
-</div>
+</header>
